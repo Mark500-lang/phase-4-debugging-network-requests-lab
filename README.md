@@ -63,11 +63,15 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+    I tried to create a new toy. I then checked the console and I got this error 'POST http://192.168.0.114:4000/toys 500 (Internal Server Error)'. 
+    I then went to the toys controller and inspected the create method. I found out that Toys had been spelled incorrectly.
 
 - Update the number of likes for a toy
 
   - How I debugged:
+    I clicked the like button and checked the console for this error message 'Uncaught (in promise) SyntaxError: Unexpected end of JSON input'. After inspecting the update method in the controller I saw that no json data was being returned.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    I found an Internal Server Error and after looking at the routes file I found a mising destroy method to the resources.
